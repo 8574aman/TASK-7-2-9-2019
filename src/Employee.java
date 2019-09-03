@@ -6,8 +6,9 @@ import java.io.ObjectOutputStream;
 public class Employee implements Serializable {
 	@Override
 	public String toString() {
-		return "Employee [eno=" + eno + ", ename=" + ename + ", salary=" + salary + ", designation=" + designation
-				+ ", department=" + department + "]";
+		return "Employee [eno=" + eno + ", ename=" + ename + ", salary="
+				+ salary + ", designation=" + designation + ", department="
+				+ department + "]";
 	}
 
 	private int eno;

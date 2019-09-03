@@ -1,11 +1,11 @@
 import java.util.Scanner;
-
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
 public class MainEmp {
 
-    private static final String filepath="E:/worldpay training/JAVA/File4.txt";
+   
 	public static void main(String[] args) {
 		
 		  MainEmp objectIO = new MainEmp();
@@ -45,9 +45,11 @@ public class MainEmp {
 		// TODO Auto-generated method stub
 		try {
 			 
-            FileOutputStream fileOut = new FileOutputStream(filepath);
+			File f = new File("emp_data.txt");
+            FileOutputStream fileOut = new FileOutputStream(f);
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(emp);
+            for(Employee xx:emp)
+            objectOut.writeObject(xx);
             objectOut.close();
             System.out.println("The Object  was succesfully written to a file");
  
